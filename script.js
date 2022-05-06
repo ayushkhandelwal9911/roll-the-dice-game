@@ -1,23 +1,4 @@
 'use strict';
-const score0El = document.getElementById('score--0');
-const score1El = document.getElementById('score--1');
-
-const current0El = document.getElementById('current--0');
-const current1El = document.getElementById('current--1');
-
-const player0El = document.querySelector('.player--0');
-const player1El = document.querySelector('.player--1');
-
-const btnNew = document.querySelector('.btn--new');
-const btnRole = document.querySelector('.btn--roll');
-const btnHold = document.querySelector('.btn--hold');
-
-const diceEl = document.querySelector('.dice');
-
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
-const btnHTP = document.querySelector('.how-to-play');
-const btnCloseModel = document.querySelector('.close-modal');
 
 let currScore = 0;
 let activePlayer = 0;
@@ -33,19 +14,20 @@ const switchPlayer = function () {
   player1El.classList.toggle('player--active');
 };
 
-// Close Model
-const closeModel = function () {
+// Close Modal
+const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
 
-btnCloseModel.addEventListener('click', closeModel);
-overlay.addEventListener('click', closeModel);
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
 document.addEventListener('keydown', function (e) {
   if (!modal.classList.contains('hidden') && e.key == 'Escape') closeModel();
 });
 
 //How To Play
+
 btnHTP.addEventListener('click', function () {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
