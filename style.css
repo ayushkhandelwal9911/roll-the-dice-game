@@ -17,12 +17,99 @@ body {
   height: 100vh;
   color: #333;
   background-image: linear-gradient(to top left, #41fe5d 10%, #18d2d5 100%);
-  display: flex;
+  /* display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 /* LAYOUT */
+.navbar {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.nav-div {
+  width: 100%;
+  background-color: #ffffff52;
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 7rem;
+}
+
+.nav-title {
+  padding-left: 2rem;
+  font-size: 3rem;
+  color: rgb(46, 44, 44);
+}
+
+.nav-title::first-letter {
+  font-size: 4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+
+.main-first {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
 main {
   position: relative;
   width: 100rem;
@@ -100,6 +187,27 @@ main {
 }
 
 /* ABSOLUTE POSITIONED ELEMENTS */
+.how-to-play {
+  left: 50%;
+  transform: translateX(-10%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
 .btn {
   position: absolute;
   left: 50%;
@@ -123,6 +231,12 @@ main {
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
+.how-to-play::first-letter {
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+
 .btn::first-letter {
   font-size: 2.4rem;
   display: inline-block;
@@ -141,6 +255,11 @@ main {
 
 .btn:active {
   transform: translate(-50%, 3px);
+  /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); */
+}
+
+.how-to-play:active {
+  transform: translate(-10%, 2px);
   /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); */
 }
 

@@ -14,6 +14,11 @@ const btnHold = document.querySelector('.btn--hold');
 
 const diceEl = document.querySelector('.dice');
 
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnHTP = document.querySelector('.how-to-play');
+const btnCloseModel = document.querySelector('.close-modal');
+
 let currScore = 0;
 let activePlayer = 0;
 let score = [0, 0];
@@ -23,9 +28,28 @@ const switchPlayer = function () {
   currScore = 0;
   document.getElementById(`current--${activePlayer}`).textContent = currScore;
   activePlayer = activePlayer == 0 ? 1 : 0;
+  diceEl.classList.add('hidden');
   player0El.classList.toggle('player--active');
   player1El.classList.toggle('player--active');
 };
+
+// Close Model
+const closeModel = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+btnCloseModel.addEventListener('click', closeModel);
+overlay.addEventListener('click', closeModel);
+document.addEventListener('keydown', function (e) {
+  if (!modal.classList.contains('hidden') && e.key == 'Escape') closeModel();
+});
+
+//How To Play
+btnHTP.addEventListener('click', function () {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+});
 
 // New Game Function
 btnNew.addEventListener('click', function () {

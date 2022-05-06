@@ -8,29 +8,53 @@
     <title>Pig Game</title>
   </head>
   <body>
-    <main>
-      <section class="player player--0 player--active">
-        <h2 class="name" id="name--0">Player 1</h2>
-        <p class="score" id="score--0">0</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current--0">0</p>
-        </div>
-      </section>
-      <section class="player player--1">
-        <h2 class="name" id="name--1">Player 2</h2>
-        <p class="score" id="score--1">0</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current--1">0</p>
-        </div>
-      </section>
+    <!-- Nav Bar -->
+    <nav class="navbar">
+      <div class="nav-div">
+        <h3 class="nav-title">🎲&nbsp;Roll The Dice</h3>
+        <span
+          ><button type="button" class="how-to-play">
+            🎮 How To Play
+          </button></span
+        >
+      </div>
+    </nav>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>How To Play</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi fugit a
+        dolor ipsum maxime vero eum excepturi, minus dolore quis deleniti
+        eveniet sed! Ad magni adipisci odio delectus hic repudiandae!
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="main-first">
+      <main>
+        <section class="player player--0 player--active">
+          <h2 class="name" id="name--0">Player 1</h2>
+          <p class="score" id="score--0">0</p>
+          <div class="current">
+            <p class="current-label">Current</p>
+            <p class="current-score" id="current--0">0</p>
+          </div>
+        </section>
+        <section class="player player--1">
+          <h2 class="name" id="name--1">Player 2</h2>
+          <p class="score" id="score--1">0</p>
+          <div class="current">
+            <p class="current-label">Current</p>
+            <p class="current-score" id="current--1">0</p>
+          </div>
+        </section>
 
-      <img src="dice-1.png" alt="Playing dice" class="dice hidden" />
-      <button class="btn btn--new">🔄 New game</button>
-      <button class="btn btn--roll">🎲 Roll dice</button>
-      <button class="btn btn--hold">📥 Hold</button>
-    </main>
+        <img src="dice-1.png" alt="Playing dice" class="dice hidden" />
+        <button class="btn btn--new">🔄 New game</button>
+        <button class="btn btn--roll">🎲 Roll dice</button>
+        <button class="btn btn--hold">📥 Hold</button>
+      </main>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
