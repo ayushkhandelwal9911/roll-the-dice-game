@@ -5,6 +5,8 @@ let activePlayer = 0;
 let score = [0, 0];
 let playing = true;
 
+// document.querySelector('.modal').classList.remove('hidden');
+
 const switchPlayer = function () {
   currScore = 0;
   document.getElementById(`current--${activePlayer}`).textContent = currScore;
